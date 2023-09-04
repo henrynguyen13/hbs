@@ -1,52 +1,121 @@
 <html>
 
   <head>
-    <title>Weather</title>
+    <title>Email</title>
     <link rel="icon" href="/img/weather.png" />
-    <link rel="stylesheet" href="/css/styles.css" />
+    <style>
+      body {
+  color: #333333;
+  font-family: arial;
+  max-width: 650px;
+  margin: 0 auto;
+  padding: 0 16px;
+  min-height: 100vh;
+  line-height: 1.6;
+}
+
+.content-wrap {
+  background-color: #fff;
+  margin: 20px auto;
+  max-width: 600px;
+  border-radius: 5px;
+  border: #ccc solid 1px
+}
+
+.content {
+  padding: 20px;
+  font-size: 18px;
+
+}
+
+.content-detail {
+  margin-bottom: 10px;
+}
+
+.link {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.ul {
+  list-style-type: none;
+  margin-left: 20px;
+  padding-left: 0;
+}
+
+.li {
+  margin-bottom: 5px;
+}
+
+
+
+.title {
+  background-color: #008000;
+  font-size: 18px;
+  color: #ffffff;
+  padding: 20px;
+}
+
+.title-detail {
+  font-weight: 600;
+}
+.name {
+  font-weight: 600;
+}
+
+.logo {
+  width: 100px;
+}
+
+.footer {
+  display: block;
+  
+}
+
+    </style>
     <script src="/js/app.js"></script>
   </head>
 
-  <body>
+  <body style="">
     <div class="content-wrap">
 
       <div class="title">Thư mời tham gia vào lớp học</div>
 
       <div class="content">
 
-        <div>Chào <span class="name">{{name}}</span>,</div>
+        <div class="content-detail">Chào <span class="name">{{name}}</span>,</div>
 
-        <div>Chúng tôi xin mời bạn tham gia vào lớp học
+        <div class="content-detail">Chúng tôi xin mời bạn tham gia vào lớp học
           <span class="name">{{className}}</span>.
         </div>
 
-        <div>Thông tin chi tiết về lớp học: </div>
-        <ul>
-          <li><span class="title-detail">Tên lớp học:</span> {{className}}</li>
-          <li><span class="title-detail">Mã lớp học:</span> {{code}} </li>
-          <li><span class="title-detail">Mô tả:</span> {{description}}</li>
-          <li><span class="title-detail">Đường link tham gia:</span>
-            <a href="{{link}}" target="_blank">{{link}}</a>
+        <div class="content-detail">Thông tin chi tiết về lớp học: </div>
+        <ul class="ul">
+          <li class="li"><span class="title-detail">Tên lớp học:</span> {{className}}</li>
+          <li class="li"><span class="title-detail">Mã lớp học:</span> {{code}} </li>
+          <li class="li"><span class="title-detail">Mô tả:</span> {{description}}</li>
+          <li class="li"><span class="title-detail">Đường link tham gia:</span>
+            <a class="link" href="{{link}}" target="_blank">{{link}}</a>
           </li>
 
         </ul>
 
-        <div>
+        <div class="content-detail">
           Nếu bạn có bất kỳ câu hỏi hoặc cần hỗ trợ thêm, xin vui lòng liên hệ
           với chúng tôi qua địa chỉ email
-          <a href="mailto:developer@iquiz.vn">developer@iquiz.vn</a>
+          <a class="link" href="mailto:developer@iquiz.vn">developer@iquiz.vn</a>
         </div>
 
-        <div class="footer">
+        <div class="footer content-detail">
           <div>
             <div>
               Trân trọng,
             </div>
             <div>iquiz</div>
           </div>
-          <div >
+          {{!-- <div >
             <img class="logo" src="logo.svg" />
-          </div>
+          </div> --}}
         </div>
       </div>
     </div>
